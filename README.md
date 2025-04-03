@@ -2,6 +2,8 @@
 
 A modular, interactive game platform powered by a custom hardware-software ecosystem, built for real-time engagement through networked tile inputs and dynamic visuals. Designed for immersive, multiplayer physical games using RGB floor tiles and a central Godot client.
 
+![image](https://github.com/user-attachments/assets/c94dab46-e484-4705-a22c-eb99ede6bd35)
+
 ---
 
 ## 🔧 Architecture Overview
