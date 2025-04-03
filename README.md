@@ -90,8 +90,3 @@ dotnet test
    `Editor > Settings > Export > Windows`
 5. Export the game via:
    `Project > Export > Export Project`
-
----
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE.md).
