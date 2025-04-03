@@ -1,89 +1,97 @@
 # Chroma
 
-## Table of Contents
-* [Architecture](#architecture)
-  * [Internal Components](#planned-internal)
-  * [External Integrations](#external-integrations)
-* [Database](#database)
-  * [Setup](#setup)
-* [Server](#server)
-  * [Setup](#setup)
-* [Admin Client](#admin-client)
-  * [Setup](#setup)
-* [Godot Client](#godotclient)
-  * [Setup](#setup)
+A modular, interactive game platform powered by a custom hardware-software ecosystem, built for real-time engagement through networked tile inputs and dynamic visuals. Designed for immersive, multiplayer physical games using RGB floor tiles and a central Godot client.
 
+---
 
-## Architecture
-### Planned Internal:
-- Database (Postgres)
-- Server (ASPNET Core)
-- Admin Client (TBC)
-  - Game configuration
-  - Game monitoring
-  - Realtime/Historic data analytics
-- Game Clients (Godot)
+## 🔧 Architecture Overview
 
-### External Integrations:
-- Vendor Microcontroller and Tiles
+### 🧠 Internal Components
+- **Database**: PostgreSQL
+- **Server**: ASP.NET Core (with Entity Framework Core ORM)
+- **Admin Client** (WIP):
+  - Game configuration tools
+  - Realtime and historical data monitoring
+  - Analytics dashboards
+- **Game Clients**: Developed in **Godot 4 (.NET)**
 
-<img src="https://github.com/user-attachments/assets/89e43dc8-9f39-46e3-bc4c-83cc6ad8b65c">
+### 🌐 External Integrations
+- Vendor-provided microcontroller and tile hardware (UDP protocol)
+- Custom-built communication protocol for real-time input and visual feedback
 
-## Database
-- DB: Postgresql
+---
 
-### Setup
-TBC
+## 🗄️ Database
+- **Technology**: PostgreSQL
+- **Setup**: *To be completed*
 
-## Server
-- Web Framework: ASPNET Core
-- ORM Framework: Entity Framework Core
+---
 
-### Setup
-TBC
+## 🌐 Server
+- **Framework**: ASP.NET Core
+- **ORM**: Entity Framework Core
+- **Setup**: *To be completed*
 
-## LocalClient
+---
+
+## 🧪 Local Client Setup
+
+> *Temporary setup flow; will later be managed by the backend server.*
+
 ### Prerequisites
-- Node Package Manager ([NPM](https://nodejs.org/en/download/package-manager)) installed
+- [Node.js / NPM](https://nodejs.org/en/download/package-manager)
 
-### Setup
-Note: These steps are only temporary. These will be covered by the backend Server setup later.
+### Steps
+```bash
+cd ./Chroma.LocalClient
+npm install
+npm run dev
+```
+Visit [http://localhost:5173](http://localhost:5173) if it doesn’t open automatically.
 
-1. Head to the client directory, ``cd ./Chroma.LocalClient``
-1. Install all dependencies, ``npm install``
-1. Run the client, ``npm run dev``. This should open the browser. Otherwise, head to the following url on your browser, ``http://localhost:5173``
+---
 
-## GodotClient
+## 🎮 Godot Game Client
 
-Note: GodotClient has its own `.sln` in the same folder because Godot currently requires this.
+### Getting Started
+1. Download [Godot 4 (.NET)](https://godotengine.org/)
+2. Import the project from `GodotClient/project.godot`
+3. (Optional) Configure external editor in:
+   `Editor > Editor Settings > DotNet > Editor`
 
-### Setup
+### Debugging
+Set `GODOT_BIN` as an environment variable to point to the Godot executable.  
+Also update `DebugLauncher > Properties > Debugging`.  
+More info: https://github.com/godotengine/godot-proposals/issues/8648#issuecomment-1974909410
 
-1. Download Godot 4 (the .NET variant) from https://godotengine.org/. It has no installer so put it somewhere reasonable. The first time you run it, `Import` the project (`GodotClient/project.godot`).
-1. To use an external editor like VS Code or Visual Studio, in the Godot editor go to `Editor > Editor Settings > DotNet > Editor` and set the external editor. Leave other fields at defaults.
-1. To allow the external editor to run the project in Godot, set the `GODOT_BIN` environment variable to the executable downloaded above. See more instructions [here](https://github.com/Mikeware/GoDotNet.BlankTemplate?tab=readme-ov-file#godot-location).
-   Additionally, the DebugLauncher project needs its `Properties > Debugging` updated as described [here](https://github.com/godotengine/godot-proposals/issues/8648#issuecomment-1974909410). Note we use call the envvar `GODOT_BIN` instead of `GODOT4` because the former is required by gdUnit4 (see [Godot Tests](#godot-tests) below).
+---
 
-### Testing
+## ✅ Testing
 
-#### Pure C# Tests
+### Unit Tests
+- Framework: [xUnit](https://xunit.net/)
+```bash
+dotnet test
+```
 
-We use [xUnit](https://xunit.net/). You can just run `dotnet test`, or from the Test Explorer in Visual Studio or other IDE. This will also run the [Godot Tests](#godot-tests) below.
+### Godot Tests
+- Framework: [gdUnit4](https://mikeschulze.github.io/gdUnit4/)
+- Tests are located in `Chroma.GodotClient/Tests`
 
-#### Godot Tests
+---
 
-We use [gdUnit4](https://mikeschulze.github.io/gdUnit4/), along with the [adapter for VSTest](https://mikeschulze.github.io/gdUnit4/csharp_project_setup/vstest-adapter/). This allows us to run all tests with `dotnet test`. You can also [run and debug tests from within Godot](https://mikeschulze.github.io/gdUnit4/testing/run-tests/).
+## 🚀 Releasing (Exporting from Godot)
 
-See [gdUnit4 docs](https://mikeschulze.github.io/gdUnit4/advanced_testing/index/) for how to use the test APIs.
+1. Download export templates: https://godotengine.org/download/archive/
+2. Install via:
+   `Editor > Manage Export Templates`
+3. Download [rcedit](https://github.com/electron/rcedit/releases)
+4. Set `rcedit` path in:
+   `Editor > Settings > Export > Windows`
+5. Export the game via:
+   `Project > Export > Export Project`
 
-Since gdUnit4 is installed as an addon into a Godot project, tests go in `Chroma.GodotClient/Tests`, and we need to exclude any new test files from being [exported](#release).
+---
 
-### Release
-
-This is known as "Exporting" in Godot. More details in https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html.
-
-1. Download the export templates for your version of Godot: https://godotengine.org/download/archive/
-1. Install them in `Editor > Manage Export Templates`.
-1. Download `rcedit`: https://github.com/electron/rcedit/releases
-1. Update the `rcedit` path in `Editor > Settings > Export > Windows`.
-Go to `Project > Export` and click `Export Project`.
+## 📄 License
+This project is licensed under the [MIT License](LICENSE.md).
