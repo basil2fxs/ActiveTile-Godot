@@ -1,0 +1,19 @@
+﻿// Spec for testing using a serial interface.
+// We use com0com loopback serial ports, so the port name on the game side is different to the
+// hardware side.
+{
+    "Grid": {
+        "Width": 14,
+        "Height": 11,
+        "PixelsPerUnit": 1,
+        "ColumnWise": false,
+        "OutputChains": [
+            {
+                "SerialPort": "COM11",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 0,
+                "LastIndex": 10
+            }
+        ]
+    }
+}

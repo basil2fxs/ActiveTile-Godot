@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cybbv7b1qhddc"
+path="res://.godot/imported/little-charlie-synthwave-version-background-music-for-video-vlog-204016.mp3-d9d9536d807a8b1aadd83600e0e33d5d.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/little-charlie-synthwave-version-background-music-for-video-vlog-204016.mp3"
+dest_files=["res://.godot/imported/little-charlie-synthwave-version-background-music-for-video-vlog-204016.mp3-d9d9536d807a8b1aadd83600e0e33d5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

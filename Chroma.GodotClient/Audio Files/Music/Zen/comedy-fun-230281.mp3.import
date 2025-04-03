@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csi2jtesy5nd3"
+path="res://.godot/imported/comedy-fun-230281.mp3-a4d7a8048bc7f07f145dc9a8fda6763e.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Zen/comedy-fun-230281.mp3"
+dest_files=["res://.godot/imported/comedy-fun-230281.mp3-a4d7a8048bc7f07f145dc9a8fda6763e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

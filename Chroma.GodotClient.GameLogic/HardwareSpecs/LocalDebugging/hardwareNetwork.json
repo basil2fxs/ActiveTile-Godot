@@ -1,0 +1,30 @@
+﻿// Spec for testing with a local HardwareEmulator. All ports are on localhost.
+{
+    "ServerEndpoint": "127.0.0.1:2317",
+    "Grid": {
+        "Width": 14,
+        "Height": 11,
+        "PixelsPerUnit": 1,
+        "ColumnWise": false,
+        "OutputChains": [
+            {
+                "Endpoint": "127.0.0.1:2301",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 0,
+                "LastIndex": 3
+            },
+            {
+                "Endpoint": "127.0.0.1:2302",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 4,
+                "LastIndex": 7
+            },
+            {
+                "Endpoint": "127.0.0.1:2303",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 8,
+                "LastIndex": 10
+            }
+        ]
+    }
+}

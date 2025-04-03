@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Based on https://github.com/MikeSchulze/gdUnit4-action/blob/master/.gdunit4_action/.runsettings -->
+<RunSettings>
+    <RunConfiguration>
+        <MaxCpuCount>1</MaxCpuCount>
+        <ResultsDirectory>./TestResults</ResultsDirectory>
+        <TargetFrameworks>net8.0</TargetFrameworks>
+        <TestSessionTimeout>180000</TestSessionTimeout>
+        <TreatNoTestsAsError>true</TreatNoTestsAsError>
+    </RunConfiguration>
+
+    <LoggerRunSettings>
+        <Loggers>
+            <Logger friendlyName="console" enabled="True">
+                <Configuration>
+                    <Verbosity>detailed</Verbosity>
+                </Configuration>
+            </Logger>
+        </Loggers>
+    </LoggerRunSettings>
+
+    <GdUnit4>
+        <!-- Additional Godot runtime parameters-->
+        <!-- These parameters are crucial for configuring the Godot runtime to work in headless environments, such as those used in automated testing or CI/CD pipelines.-->
+        <Parameters>--headless --rendering-driver opengl3 --screen 0 --verbose</Parameters>
+        <!-- Controls the Display name attribute of the TestCase. Allowed values are SimpleName and FullyQualifiedName.
+             This likely determines how the test names are displayed in the test results.-->
+        <DisplayName>SimpleName</DisplayName>
+    </GdUnit4>
+</RunSettings>

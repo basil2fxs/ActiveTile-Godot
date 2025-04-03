@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7ro5pnninqv6"
+path="res://.godot/imported/foxeaglion-medusa-powerfull-strong-retrosynth-synthwave-music-194435.mp3-9d65ae01f98767b01ea7f18e39225a10.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/foxeaglion-medusa-powerfull-strong-retrosynth-synthwave-music-194435.mp3"
+dest_files=["res://.godot/imported/foxeaglion-medusa-powerfull-strong-retrosynth-synthwave-music-194435.mp3-9d65ae01f98767b01ea7f18e39225a10.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

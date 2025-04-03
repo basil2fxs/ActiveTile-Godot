@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0xwricpjadql"
+path="res://.godot/imported/level-up-enhancement-8-bit-retro-sound-effect-153002.mp3-bc9105e6ccba715a5acd7208d92382db.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/GameWin/level-up-enhancement-8-bit-retro-sound-effect-153002.mp3"
+dest_files=["res://.godot/imported/level-up-enhancement-8-bit-retro-sound-effect-153002.mp3-bc9105e6ccba715a5acd7208d92382db.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

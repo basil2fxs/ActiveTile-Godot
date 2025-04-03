@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbohq7qyw4a2d"
+path="res://.godot/imported/cardboardbox-107634.mp3-ca2327a44551708cc7595257ab474cd9.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Collision/cardboardbox-107634.mp3"
+dest_files=["res://.godot/imported/cardboardbox-107634.mp3-ca2327a44551708cc7595257ab474cd9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

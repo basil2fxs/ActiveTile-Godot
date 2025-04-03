@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0heq71bieodi"
+path="res://.godot/imported/jazzy-music-128388.mp3-4f93cf9aff956a217350c6089b2527f0.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/jazzy-music-128388.mp3"
+dest_files=["res://.godot/imported/jazzy-music-128388.mp3-4f93cf9aff956a217350c6089b2527f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3vvjb7myah6b"
+path="res://.godot/imported/hurt_c_08-102842.mp3-f2966751e38216ab526f85959327916a.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Negative/hurt_c_08-102842.mp3"
+dest_files=["res://.godot/imported/hurt_c_08-102842.mp3-f2966751e38216ab526f85959327916a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,5 @@
+# https://editorconfig.org
+
+# Godot requires LF line endings, see https://github.com/godotengine/godot-proposals/issues/897
+[*]
+end_of_line = lf

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvwg3nwu8l87c"
+path="res://.godot/imported/foxeaglion-orion-fast-retrosynth-synthwave-music-194434.mp3-fa3aeb729f58ff2459b3bf75ff230053.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/foxeaglion-orion-fast-retrosynth-synthwave-music-194434.mp3"
+dest_files=["res://.godot/imported/foxeaglion-orion-fast-retrosynth-synthwave-music-194434.mp3-fa3aeb729f58ff2459b3bf75ff230053.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

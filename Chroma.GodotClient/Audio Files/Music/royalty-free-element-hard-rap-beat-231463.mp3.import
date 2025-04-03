@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://40r220k88gah"
+path="res://.godot/imported/royalty-free-element-hard-rap-beat-231463.mp3-3268d86f287770d7eefa83cb3bd89853.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/royalty-free-element-hard-rap-beat-231463.mp3"
+dest_files=["res://.godot/imported/royalty-free-element-hard-rap-beat-231463.mp3-3268d86f287770d7eefa83cb3bd89853.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,32 @@
+﻿// Grid room with pressure tiles.
+// 192.168.20.20 was the most recent IP of the machine in there, for use with port forwarder.
+// 192.168.0.7 is the IP of the hardware from that machine.
+{
+    "ServerEndpoint": "127.0.0.1:2317",
+    "Grid": {
+        "Width": 23,
+        "Height": 11,
+        "PixelsPerUnit": 1,
+        "ColumnWise": false,
+        "OutputChains": [
+            {
+                "Endpoint": "192.168.0.7:21",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 0,
+                "LastIndex": 3
+            },
+            {
+                "Endpoint": "192.168.0.7:22",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 4,
+                "LastIndex": 7
+            },
+            {
+                "Endpoint": "192.168.0.7:23",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 8,
+                "LastIndex": 10
+            }
+        ]
+    }
+}

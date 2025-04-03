@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0p72g6esfkip"
+path="res://.godot/imported/arcade-party-173553.mp3-ffd27ea38cbc5840f2d258e479a26928.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/arcade-party-173553.mp3"
+dest_files=["res://.godot/imported/arcade-party-173553.mp3-ffd27ea38cbc5840f2d258e479a26928.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

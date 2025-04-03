@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckbjdjccvv4s3"
+path="res://.godot/imported/8-bit-arcade-138828.mp3-3dfe2a8609815322a00877604e2d3809.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/8-bit-arcade-138828.mp3"
+dest_files=["res://.godot/imported/8-bit-arcade-138828.mp3-3dfe2a8609815322a00877604e2d3809.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

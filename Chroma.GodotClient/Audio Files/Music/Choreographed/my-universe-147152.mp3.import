@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cydwyjwdcsbb1"
+path="res://.godot/imported/my-universe-147152.mp3-04a48380c6bcee6cc802273dd482d5c2.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Choreographed/my-universe-147152.mp3"
+dest_files=["res://.godot/imported/my-universe-147152.mp3-04a48380c6bcee6cc802273dd482d5c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

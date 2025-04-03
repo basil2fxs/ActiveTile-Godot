@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cp0emqfeqjk8j"
+path="res://.godot/imported/freaky-trap-224662.mp3-1d11c56eb3cb723832a0fb3a2470cf89.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/freaky-trap-224662.mp3"
+dest_files=["res://.godot/imported/freaky-trap-224662.mp3-1d11c56eb3cb723832a0fb3a2470cf89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

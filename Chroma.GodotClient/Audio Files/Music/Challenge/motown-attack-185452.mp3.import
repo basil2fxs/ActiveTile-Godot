@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd8g068lkp16s"
+path="res://.godot/imported/motown-attack-185452.mp3-3187d3147605d21100b335647eb2b182.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/motown-attack-185452.mp3"
+dest_files=["res://.godot/imported/motown-attack-185452.mp3-3187d3147605d21100b335647eb2b182.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

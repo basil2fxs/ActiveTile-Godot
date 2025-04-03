@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ba0id7b70snnv"
+path="res://.godot/imported/level-up-bonus-sequence-2-186891.mp3-e7005930ca7547d905295de0ed9a4677.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/GameWin/level-up-bonus-sequence-2-186891.mp3"
+dest_files=["res://.godot/imported/level-up-bonus-sequence-2-186891.mp3-e7005930ca7547d905295de0ed9a4677.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

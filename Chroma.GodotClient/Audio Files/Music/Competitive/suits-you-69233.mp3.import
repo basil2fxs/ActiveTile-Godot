@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3qyg22re1ia1"
+path="res://.godot/imported/suits-you-69233.mp3-5c8cafbd501aa93cb95af35833784117.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Competitive/suits-you-69233.mp3"
+dest_files=["res://.godot/imported/suits-you-69233.mp3-5c8cafbd501aa93cb95af35833784117.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

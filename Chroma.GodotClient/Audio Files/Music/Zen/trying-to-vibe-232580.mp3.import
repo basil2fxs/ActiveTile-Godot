@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2kb581qdceky"
+path="res://.godot/imported/trying-to-vibe-232580.mp3-70f061fbf96e36750d99176461923ad9.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Zen/trying-to-vibe-232580.mp3"
+dest_files=["res://.godot/imported/trying-to-vibe-232580.mp3-70f061fbf96e36750d99176461923ad9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjlrscenm1704"
+path="res://.godot/imported/arcade-heal-48183.mp3-fed7301963c3429b805aee120a83200f.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Neutral/arcade-heal-48183.mp3"
+dest_files=["res://.godot/imported/arcade-heal-48183.mp3-fed7301963c3429b805aee120a83200f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.2.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+
+    <!-- Godot specific -->
+    <Configurations>Debug;ExportDebug;ExportRelease;Release</Configurations>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+
+    <!-- For GdUnit4Net -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+    <!-- Uniform across Chroma projects. -->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RootNamespace>MysticClue.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration) == 'Release'">
+    <!-- Godot always uses the Debug folder except when exporting.
+         This allows us to test conditional compilation. -->
+    <OutputPath>$(BaseOutputPath)\Debug\</OutputPath>
+  </PropertyGroup>
+  <!-- For CI and Release builds. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'ExportRelease'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'ExportRelease'">
+    <SourceRoot Include="$(SolutionDir)" />
+  </ItemGroup>
+  <ItemGroup>
+	<Content Include="Audio Files\**\*" />
+	<Content Include="Fonts\**\*" />
+    <Content Include="HowToPlay\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="gdUnit4.api" Version="4.3.1" />
+    <PackageReference Include="gdUnit4.test.adapter" Version="2.0.0" />
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chroma.GodotClient.GameLogic\Chroma.GodotClient.GameLogic.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bbwgwc74ex3vw"
+path="res://.godot/imported/8-bit-blast-63035-d.wav-f55dd5ec9b8e90afb58adb34a951ab81.sample"
+
+[deps]
+
+source_file="res://Audio Files/Neutral/8-bit-blast-63035-d.wav"
+dest_files=["res://.godot/imported/8-bit-blast-63035-d.wav-f55dd5ec9b8e90afb58adb34a951ab81.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpaxu1fglwj72"
+path="res://.godot/imported/sfx_jump_07-80241.mp3-7cae9315b5293b8bdad4d15ef588b52e.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Neutral/sfx_jump_07-80241.mp3"
+dest_files=["res://.godot/imported/sfx_jump_07-80241.mp3-7cae9315b5293b8bdad4d15ef588b52e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

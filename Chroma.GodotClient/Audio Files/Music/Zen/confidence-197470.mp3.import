@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2jupe7gmbcar"
+path="res://.godot/imported/confidence-197470.mp3-482efe88d8606d45984d282db038e45c.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Zen/confidence-197470.mp3"
+dest_files=["res://.godot/imported/confidence-197470.mp3-482efe88d8606d45984d282db038e45c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

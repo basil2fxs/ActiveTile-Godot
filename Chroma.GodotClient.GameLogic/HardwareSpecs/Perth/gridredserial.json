@@ -1,0 +1,16 @@
+﻿{
+    "Grid": {
+        "Width": 20,
+        "Height": 11,
+        "PixelsPerUnit": 1,
+        "ColumnWise": false,
+        "OutputChains": [
+            {
+                "SerialPort": "COM4",
+                "ConnectedAtEnd": true,
+                "FirstIndex": 0,
+                "LastIndex": 10
+            }
+        ]
+    }
+}

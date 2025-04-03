@@ -1,0 +1,43 @@
+{
+  "name": "mysticclue-chroma-localclient",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.0.0",
+    "@vue/compiler-sfc": "^3.4.33",
+    "@vue/runtime-core": "^3.4.33",
+    "@vue/runtime-dom": "^3.4.33",
+    "@vueuse/core": "^10.11.0",
+    "dotenv": "^16.4.5",
+    "file-uri-to-path": "^2.0.0",
+    "pinia": "^2.1.7",
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^3.53.0",
+    "vue": "^3.4.33"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@types/node": "^20.14.10",
+    "@types/vue": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/tsconfig": "^0.5.1",
+    "prettier": "3.3.2",
+    "sass": "^1.77.6",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-components": "^0.27.2",
+    "vite": "^5.3.1",
+    "vite-plugin-pages": "^0.32.3",
+    "vite-plugin-pwa": "^0.20.0",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vue-tsc": "^2.0.26"
+  }
+}

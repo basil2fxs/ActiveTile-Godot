@@ -1,0 +1,43 @@
+﻿Floor, buttonwall, climb:
+- Floor tiles, wall buttons, climbing handholds:
+  - 6-pin connector, male toward PC
+  - 3 bytes per pixel
+  - 1 byte per sensor
+
+Target:
+- Target:
+  - equivalent to 3 buttons, center is first
+  - only first button sensor works, others are always unpressed
+
+Tetris (Control):
+- Floor tile:
+  - Same as regular tile
+  - ?? tile is configured to briefly set sensor to on for each time it's stepped on (rather than continuously report on)
+  - ?? how is it chained?
+- Wall pixels:
+  - 5-pin connector (either side toward PC)
+  - 3 bytes per pixel (same as regular button)
+  - No input
+- D-pad:
+  - 10 * regular buttons
+  - Order: left, up, right, down, L bot, L mid, L top, R top, R mid, R bot (or maybe all upside down)
+
+Hide:
+- Buttons as above
+- LED panel: (5V !!!)
+  - Different protocol
+- Motion sensor:
+  - regular sensor, slight delay after movement stops
+- Eye
+  - regular light protocol, but only red, other colors ignored
+
+Lasers: (12V !!!)
+- Emitter:
+  - 1 byte each, only on and off
+- Detector:
+  - 1 byte each, same values as others
+
+Basketball:
+- 6-pin connector, same as others
+- 1 light and 1 sensor per basket
+- Sensor only on while basketball is moving downward through hoop

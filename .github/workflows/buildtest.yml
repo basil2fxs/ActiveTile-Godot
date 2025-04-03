@@ -1,0 +1,71 @@
+﻿# Based on: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Chroma.GodotClient build and test
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
+
+jobs:
+  buildtest:
+    runs-on: windows-latest
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        global-json-file: global.json
+        cache: true
+        cache-dependency-path: "**/packages.lock.json"
+
+    - name: Install Godot
+      id: install-godot
+      uses: ./.github/actions/install-godot
+      with:
+        godot-version: 4.2.2
+
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+      env:
+        GODOT_BIN: ${{ steps.install-godot.outputs.godot-exe  }}
+      with:
+        detached: true
+
+    - name: Restore dependencies
+      working-directory: ./Chroma.GodotClient
+      run: dotnet restore --locked-mode
+
+    - name: Godot import
+      working-directory: ./Chroma.GodotClient
+      env:
+        GODOT_BIN: ${{ steps.install-godot.outputs.godot-exe  }}
+      shell: bash
+      run: |
+        ${{ env.GODOT_BIN }} --headless --import ./project.godot ||
+        echo "Ignoring Godot exit code" $?
+
+    - name: Build
+      working-directory: ./Chroma.GodotClient
+      run: dotnet build --no-restore
+
+    - name: C# tests
+      working-directory: ./Chroma.GodotClient
+      env:
+        GODOT_BIN: ${{ steps.install-godot.outputs.godot-exe  }}
+      run: dotnet test --no-build --verbosity=normal csharp-tests.slnf
+
+    - name: Godot tests
+      working-directory: ./Chroma.GodotClient
+      env:
+        GODOT_BIN: ${{ steps.install-godot.outputs.godot-exe  }}
+      run: dotnet test --no-build --verbosity=normal --settings=godot-tests.runsettings godot-tests.slnf

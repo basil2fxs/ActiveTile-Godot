@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnl5klneymmy2"
+path="res://.godot/imported/hound-dog-jazz-228434.mp3-8337eb9e79974ad5980be9eb63eb377a.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/hound-dog-jazz-228434.mp3"
+dest_files=["res://.godot/imported/hound-dog-jazz-228434.mp3-8337eb9e79974ad5980be9eb63eb377a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

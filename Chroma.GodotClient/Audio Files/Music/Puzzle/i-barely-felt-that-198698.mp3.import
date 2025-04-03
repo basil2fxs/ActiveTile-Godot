@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://iuvwgwrh4w61"
+path="res://.godot/imported/i-barely-felt-that-198698.mp3-3acf204b518c0b62adf88e6262d07b53.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Puzzle/i-barely-felt-that-198698.mp3"
+dest_files=["res://.godot/imported/i-barely-felt-that-198698.mp3-3acf204b518c0b62adf88e6262d07b53.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

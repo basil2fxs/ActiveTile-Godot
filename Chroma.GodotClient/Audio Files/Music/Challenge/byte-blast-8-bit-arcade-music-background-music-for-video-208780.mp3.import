@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blg7ifu4w47jn"
+path="res://.godot/imported/byte-blast-8-bit-arcade-music-background-music-for-video-208780.mp3-809305d7404fc6ccdff718f1b154d86d.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Challenge/byte-blast-8-bit-arcade-music-background-music-for-video-208780.mp3"
+dest_files=["res://.godot/imported/byte-blast-8-bit-arcade-music-background-music-for-video-208780.mp3-809305d7404fc6ccdff718f1b154d86d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

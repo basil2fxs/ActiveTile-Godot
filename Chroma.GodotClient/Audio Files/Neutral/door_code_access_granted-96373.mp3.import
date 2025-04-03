@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3uov8k2st4sg"
+path="res://.godot/imported/door_code_access_granted-96373.mp3-99d94b45ea7af1d2e46ee563ab6911ff.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Neutral/door_code_access_granted-96373.mp3"
+dest_files=["res://.godot/imported/door_code_access_granted-96373.mp3-99d94b45ea7af1d2e46ee563ab6911ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

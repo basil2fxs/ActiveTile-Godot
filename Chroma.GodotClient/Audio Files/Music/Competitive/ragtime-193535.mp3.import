@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbfe4ls3dl53t"
+path="res://.godot/imported/ragtime-193535.mp3-a73f8b6408cd54e92c523feb67ac7e94.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Competitive/ragtime-193535.mp3"
+dest_files=["res://.godot/imported/ragtime-193535.mp3-a73f8b6408cd54e92c523feb67ac7e94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

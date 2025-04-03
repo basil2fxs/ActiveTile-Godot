@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuddksbbigyor"
+path="res://.godot/imported/minor-bosses-sux-228437.mp3-69aaaf619cac63ad29df6aa6437d35d1.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Puzzle/minor-bosses-sux-228437.mp3"
+dest_files=["res://.godot/imported/minor-bosses-sux-228437.mp3-69aaaf619cac63ad29df6aa6437d35d1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

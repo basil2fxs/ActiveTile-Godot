@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk30av8ywem76"
+path="res://.godot/imported/cardboardbox-107634-d3.wav-cd5f284f926ef53bb56626dbd33ed095.sample"
+
+[deps]
+
+source_file="res://Audio Files/Collision/cardboardbox-107634-d3.wav"
+dest_files=["res://.godot/imported/cardboardbox-107634-d3.wav-cd5f284f926ef53bb56626dbd33ed095.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

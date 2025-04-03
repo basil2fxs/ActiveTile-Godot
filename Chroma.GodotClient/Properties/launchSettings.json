@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Chroma.GodotClient": {
+      "commandName": "Executable",
+      "executablePath": "%GODOT_BIN%",
+      "commandLineArgs": "--path . --verbose",
+      "workingDirectory": "."
+    }
+  }
+}

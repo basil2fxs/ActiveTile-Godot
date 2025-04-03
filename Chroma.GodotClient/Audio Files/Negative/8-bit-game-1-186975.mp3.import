@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4lb8hffd3esi"
+path="res://.godot/imported/8-bit-game-1-186975.mp3-ec92d2e2dc01260c70ccef91b95257ce.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Negative/8-bit-game-1-186975.mp3"
+dest_files=["res://.godot/imported/8-bit-game-1-186975.mp3-ec92d2e2dc01260c70ccef91b95257ce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cy3plj4frfbjk"
+path="res://.godot/imported/success-1-6297.mp3-228194c6233516f5c8580599cafc3513.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Positive/success-1-6297.mp3"
+dest_files=["res://.godot/imported/success-1-6297.mp3-228194c6233516f5c8580599cafc3513.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

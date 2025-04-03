@@ -1,0 +1,490 @@
+[gd_scene load_steps=25 format=3 uid="uid://weopc0jb8vq8"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_ji8xp"]
+[ext_resource type="Texture2D" uid="uid://c25arptmva54d" path="res://HowToPlay/placeholder.png" id="2_aj1lv"]
+[ext_resource type="Script" path="res://UI/PlayerSelect.cs" id="2_h0sk1"]
+[ext_resource type="Script" path="res://Debugging/DebugSettingsUI.cs" id="2_iw4wq"]
+[ext_resource type="StyleBox" uid="uid://c0ja0x8bj5h6d" path="res://UI/StyleBox/background_panel.tres" id="2_o0g7m"]
+[ext_resource type="Theme" uid="uid://draaneat0h1e3" path="res://UI/main_ui_theme.tres" id="2_oqpby"]
+[ext_resource type="Script" path="res://UI/GameSelect.cs" id="3_2laac"]
+[ext_resource type="ButtonGroup" uid="uid://7d4vnoidh815" path="res://UI/GameDifficultyButtonGroup.tres" id="3_h2tew"]
+[ext_resource type="Script" path="res://GridOutput.cs" id="3_hggck"]
+[ext_resource type="Script" path="res://HardwareView.cs" id="3_ocs36"]
+[ext_resource type="Script" path="res://UI/RatioContainer.cs" id="4_0txpw"]
+[ext_resource type="Shader" path="res://SuperSampling.gdshader" id="5_4b7gr"]
+[ext_resource type="StyleBox" uid="uid://xurookoit0or" path="res://UI/StyleBox/button_normal.tres" id="5_5kix6"]
+[ext_resource type="ButtonGroup" uid="uid://rfsku4qvok6q" path="res://UI/GameTypeButtonGroup.tres" id="6_3j4yu"]
+[ext_resource type="StyleBox" uid="uid://c4pqgx16isx14" path="res://UI/StyleBox/level_normal.tres" id="6_8p0fq"]
+[ext_resource type="StyleBox" uid="uid://dofcvlxg5nvy1" path="res://UI/StyleBox/level_pressed.tres" id="7_vdq7b"]
+[ext_resource type="Theme" uid="uid://btk5dfkocos3c" path="res://UI/gametype_button_theme.tres" id="11_oc2gs"]
+[ext_resource type="PackedScene" uid="uid://d3ffyo8atj0qi" path="res://UI/InsideScreen.tscn" id="14_c7wgs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee52r"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 60
+border_width_bottom = 40
+border_color = Color(1, 1, 1, 0)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_yltfv"]
+default_font_size = 200
+
+[sub_resource type="Theme" id="Theme_m8dr0"]
+default_font_size = 40
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_put7v"]
+shader = ExtResource("5_4b7gr")
+shader_parameter/SAMPLE_COEFFICIENTS = null
+shader_parameter/SAMPLE_LOCATIONS = null
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3r8kq"]
+viewport_path = NodePath("HardwareView/GridOutput/RenderViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vhpyu"]
+viewport_path = NodePath("HardwareView/GridOutput")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ji8xp")
+
+[node name="TouchScreen" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_o0g7m")
+
+[node name="ThemeParent" type="Control" parent="TouchScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_oqpby")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TouchScreen/ThemeParent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SessionTimeLabel" type="Label" parent="TouchScreen/ThemeParent/VBoxContainer/MarginContainer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Session time: "
+
+[node name="GameNameLabel" type="Label" parent="TouchScreen/ThemeParent/VBoxContainer/MarginContainer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="MainArea" type="Control" parent="TouchScreen/ThemeParent/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerSelect" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("2_h0sk1")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 4.0
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="ResetSession" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect/CenterContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset Session"
+
+[node name="MarginContainer" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="LightButton" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/PlayerSelect/CenterContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "💡"
+
+[node name="GameSelect" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_2laac")
+ButtonNormalStyle = ExtResource("5_5kix6")
+LevelNormalStyle = ExtResource("6_8p0fq")
+LevelPressedStyle = ExtResource("7_vdq7b")
+
+[node name="GameTypeSelect" type="HBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("11_oc2gs")
+alignment = 1
+
+[node name="LeftPad" type="Control" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/GameTypeSelect"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="CooperativeGameType" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/GameTypeSelect"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("6_3j4yu")
+text = "Cooperative"
+
+[node name="CompetitiveGameType" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/GameTypeSelect"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("6_3j4yu")
+text = "Competitive"
+
+[node name="ZenGameType" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/GameTypeSelect"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("6_3j4yu")
+text = "Zen"
+
+[node name="RightPad" type="Control" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/GameTypeSelect"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="HRatioContainer" type="SplitContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 1536
+dragger_visibility = 2
+script = ExtResource("4_0txpw")
+Ratio = 0.8
+
+[node name="HRatioContainer" type="SplitContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer"]
+layout_mode = 2
+split_offset = 461
+dragger_visibility = 2
+script = ExtResource("4_0txpw")
+Ratio = 0.3
+
+[node name="PanelContainer" type="PanelContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer"]
+clip_children = 1
+clip_contents = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ee52r")
+
+[node name="GameListMargin" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/PanelContainer/GameListMargin"]
+clip_contents = false
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+scroll_deadzone = 2
+
+[node name="GameList" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/PanelContainer/GameListMargin/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="ExampleButton" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/PanelContainer/GameListMargin/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Example game"
+
+[node name="ExampleButton2" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/PanelContainer/GameListMargin/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Example"
+
+[node name="HowToPlayMargin" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/HowToPlayMargin"]
+layout_mode = 2
+
+[node name="HowToPlayText" type="Label" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/HowToPlayMargin/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+justification_flags = 0
+
+[node name="HowToPlayImage" type="TextureRect" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/HRatioContainer/HowToPlayMargin/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_aj1lv")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="DifficultySelect" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="DifficultyLabel" type="Label" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer/DifficultySelect"]
+layout_mode = 2
+text = "Difficulty"
+horizontal_alignment = 1
+
+[node name="NewbieDifficulty" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer/DifficultySelect"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("3_h2tew")
+text = "Newbie"
+
+[node name="RegularDifficulty" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer/DifficultySelect"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("3_h2tew")
+text = "Regular"
+
+[node name="EliteDifficulty" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer/DifficultySelect"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("3_h2tew")
+text = "Elite"
+
+[node name="StartGame" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/GameSelect/HRatioContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+text = "Start"
+
+[node name="InsideScreen" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea" instance=ExtResource("14_c7wgs")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="FeedbackSurvey" type="VBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yltfv")
+
+[node name="Label" type="Label" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 80
+text = "How was that game?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="SadFace" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "😒"
+
+[node name="NeutralFace" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "😐"
+
+[node name="HappyFace" type="Button" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+text = "😄"
+
+[node name="MarginContainer" type="MarginContainer" parent="TouchScreen/ThemeParent/VBoxContainer/MainArea/FeedbackSurvey"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TouchScreen/ThemeParent"]
+layout_mode = 1
+offset_right = 400.0
+offset_bottom = 135.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BackButton" type="Button" parent="TouchScreen/ThemeParent/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Back"
+
+[node name="DebugButton" type="Button" parent="TouchScreen/ThemeParent"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = -95.0
+grow_horizontal = 0
+toggle_mode = true
+text = "Debug"
+
+[node name="DebugPanel" type="PanelContainer" parent="TouchScreen"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme = SubResource("Theme_m8dr0")
+
+[node name="DebugSettingsUI" type="VBoxContainer" parent="TouchScreen/DebugPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_iw4wq")
+
+[node name="InsideScreenWindow" type="Window" parent="."]
+title = "Inside Screen"
+initial_position = 3
+size = Vector2i(640, 360)
+current_screen = 0
+visible = false
+content_scale_size = Vector2i(1920, 1080)
+content_scale_mode = 1
+content_scale_aspect = 4
+theme = ExtResource("2_oqpby")
+
+[node name="Background" type="Panel" parent="InsideScreenWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_o0g7m")
+
+[node name="HardwareView" type="Window" parent="."]
+disable_3d = true
+title = "Hardware View"
+initial_position = 2
+size = Vector2i(640, 480)
+visible = false
+script = ExtResource("3_ocs36")
+
+[node name="HardwareViewCamera" type="Camera2D" parent="HardwareView"]
+
+[node name="GridOutput" type="SubViewport" parent="HardwareView"]
+unique_name_in_owner = true
+disable_3d = true
+render_target_update_mode = 4
+script = ExtResource("3_hggck")
+
+[node name="GridOutputCamera" type="Camera2D" parent="HardwareView/GridOutput"]
+
+[node name="RenderViewport" type="SubViewport" parent="HardwareView/GridOutput"]
+disable_3d = true
+render_target_update_mode = 4
+
+[node name="RenderViewportCamera" type="Camera2D" parent="HardwareView/GridOutput/RenderViewport"]
+zoom = Vector2(20, 20)
+
+[node name="GridGameContainer" type="Node2D" parent="HardwareView/GridOutput/RenderViewport"]
+
+[node name="RenderViewportSprite" type="Sprite2D" parent="HardwareView/GridOutput"]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_put7v")
+texture = SubResource("ViewportTexture_3r8kq")
+
+[node name="GameOutputSprite" type="Sprite2D" parent="HardwareView"]
+texture_filter = 1
+texture_repeat = 1
+texture = SubResource("ViewportTexture_vhpyu")

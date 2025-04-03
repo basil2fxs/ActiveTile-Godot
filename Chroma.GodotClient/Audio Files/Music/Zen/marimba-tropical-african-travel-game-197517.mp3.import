@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://11rm8grsk2ut"
+path="res://.godot/imported/marimba-tropical-african-travel-game-197517.mp3-359bb593ad7da3877872e61d564d7c9d.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/Zen/marimba-tropical-african-travel-game-197517.mp3"
+dest_files=["res://.godot/imported/marimba-tropical-african-travel-game-197517.mp3-359bb593ad7da3877872e61d564d7c9d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

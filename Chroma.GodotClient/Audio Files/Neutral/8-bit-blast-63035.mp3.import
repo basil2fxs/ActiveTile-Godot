@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr1lp8mvlp1xy"
+path="res://.godot/imported/8-bit-blast-63035.mp3-17fec1635f90fffd10f3025699477a1e.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Neutral/8-bit-blast-63035.mp3"
+dest_files=["res://.godot/imported/8-bit-blast-63035.mp3-17fec1635f90fffd10f3025699477a1e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

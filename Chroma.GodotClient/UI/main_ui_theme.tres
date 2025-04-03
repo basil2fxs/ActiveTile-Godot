@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://draaneat0h1e3"]
+
+[ext_resource type="StyleBox" uid="uid://xurookoit0or" path="res://UI/StyleBox/button_normal.tres" id="1_4dh6o"]
+[ext_resource type="StyleBox" uid="uid://bl0kfg6tqgrq0" path="res://UI/StyleBox/button_pressed.tres" id="2_p3a6f"]
+[ext_resource type="StyleBox" uid="uid://c4pqgx16isx14" path="res://UI/StyleBox/level_normal.tres" id="3_qsi61"]
+[ext_resource type="StyleBox" uid="uid://dofcvlxg5nvy1" path="res://UI/StyleBox/level_pressed.tres" id="4_anbog"]
+
+[resource]
+default_font_size = 40
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 5
+Button/styles/disabled = ExtResource("1_4dh6o")
+Button/styles/focus = ExtResource("2_p3a6f")
+Button/styles/hover = ExtResource("1_4dh6o")
+Button/styles/normal = ExtResource("1_4dh6o")
+Button/styles/pressed = ExtResource("2_p3a6f")
+TabBar/colors/font_outline_color = Color(0, 0, 0, 1)
+TabBar/colors/font_selected_color = Color(0.952941, 0.952941, 0.952941, 1)
+TabBar/colors/font_unselected_color = Color(0.952941, 0.952941, 0.952941, 1)
+TabBar/constants/outline_size = 3
+TabBar/styles/tab_disabled = ExtResource("3_qsi61")
+TabBar/styles/tab_focus = ExtResource("4_anbog")
+TabBar/styles/tab_hovered = ExtResource("3_qsi61")
+TabBar/styles/tab_selected = ExtResource("4_anbog")
+TabBar/styles/tab_unselected = ExtResource("3_qsi61")

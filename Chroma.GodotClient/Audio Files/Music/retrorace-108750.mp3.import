@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4dlptt6qly8u"
+path="res://.godot/imported/retrorace-108750.mp3-f38992194c8b8e17e92988cb5763ff98.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Music/retrorace-108750.mp3"
+dest_files=["res://.godot/imported/retrorace-108750.mp3-f38992194c8b8e17e92988cb5763ff98.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

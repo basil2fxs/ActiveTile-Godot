@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3ffyo8atj0qi"]
+
+[ext_resource type="Script" path="res://UI/InsideScreen.cs" id="1_eha6l"]
+[ext_resource type="Script" path="res://UI/TimeDisplay.cs" id="2_8de64"]
+[ext_resource type="Script" path="res://UI/LifeCounter.cs" id="3_umok4"]
+[ext_resource type="Script" path="res://UI/ScoreCounter.cs" id="4_bwluy"]
+
+[node name="InsideScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eha6l")
+
+[node name="PerGameContainer" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="TimeDisplay" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_8de64")
+
+[node name="LifeCounter" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+vertical_alignment = 1
+script = ExtResource("3_umok4")
+
+[node name="ScoreCounter" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+vertical_alignment = 1
+script = ExtResource("4_bwluy")
+
+[node name="Message" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

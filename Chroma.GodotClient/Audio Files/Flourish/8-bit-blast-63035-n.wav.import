@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://45bui8yts20w"
+path="res://.godot/imported/8-bit-blast-63035-n.wav-62679672f456a2e99c90178e08b6f03b.sample"
+
+[deps]
+
+source_file="res://Audio Files/Flourish/8-bit-blast-63035-n.wav"
+dest_files=["res://.godot/imported/8-bit-blast-63035-n.wav-62679672f456a2e99c90178e08b6f03b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

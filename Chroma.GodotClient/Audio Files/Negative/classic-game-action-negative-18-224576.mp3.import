@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqr8fguf7wy4i"
+path="res://.godot/imported/classic-game-action-negative-18-224576.mp3-937b99c3a96b749d24ea7fcf18d0c57e.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Negative/classic-game-action-negative-18-224576.mp3"
+dest_files=["res://.godot/imported/classic-game-action-negative-18-224576.mp3-937b99c3a96b749d24ea7fcf18d0c57e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

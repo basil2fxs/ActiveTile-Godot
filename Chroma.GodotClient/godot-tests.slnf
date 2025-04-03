@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "Chroma.GodotClient.sln",
+    "projects": [
+      "Chroma.GodotClient.csproj",
+    ]
+  }
+}

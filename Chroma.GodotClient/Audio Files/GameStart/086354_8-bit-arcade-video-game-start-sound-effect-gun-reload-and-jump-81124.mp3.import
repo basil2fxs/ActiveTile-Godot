@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpla0a3g1qlod"
+path="res://.godot/imported/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3-091e128dab5aa1d96ef9292490660486.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/GameStart/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3"
+dest_files=["res://.godot/imported/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3-091e128dab5aa1d96ef9292490660486.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

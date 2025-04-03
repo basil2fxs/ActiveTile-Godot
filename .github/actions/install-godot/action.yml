@@ -1,0 +1,86 @@
+# Adapted for Windows from https://github.com/CapsCollective/godot-actions
+name: 'Install Godot'
+description: 'Installs the Godot engine for Windows'
+
+inputs:
+  godot-version:
+    description: 'The version of Godot to build with'
+    required: true
+    default: 0.0
+  install-templates:
+    description: 'Whether or not to install the Godot export templates'
+    required: false
+    default: false
+
+outputs:
+  godot-exe:
+    description: 'Path to Godot executable'
+    value: ${{ steps.assign-executable.outputs.GODOT_EXE }}
+  godot-console-exe:
+    description: 'Path to Godot console executable'
+    value: ${{ steps.assign-executable.outputs.GODOT_CONSOLE_EXE }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache Godot
+      id: cache-godot
+      uses: actions/cache@v4
+      with:
+        path: C:/Godot/Godot_v${{ inputs.godot-version }}-stable_mono_win64
+        key: Godot_v${{ inputs.godot-version }}-stable_mono_win64
+
+    - name: Fetch Godot
+      if: steps.cache-godot.outputs.cache-hit != 'true'
+      uses: dsaltares/fetch-gh-release-asset@master
+      with:
+        repo: 'godotengine/godot-builds'
+        version: 'tags/${{ inputs.godot-version }}-stable'
+        file: 'Godot_v${{ inputs.godot-version }}-stable_mono_win64.zip'
+        target: '$HOME/Downloads/godot.zip'
+
+    - name: Install Godot
+      if: steps.cache-godot.outputs.cache-hit != 'true'
+      shell: bash
+      working-directory: '$HOME/Downloads'
+      run: |
+        unzip ./godot.zip
+        mkdir C:/Godot/
+        mv ./Godot_v${{ inputs.godot-version }}-stable_mono_win64 C:/Godot/Godot_v${{ inputs.godot-version }}-stable_mono_win64
+
+    - name: Cache Godot Export Templates
+      id: cache-templates
+      uses: actions/cache@v4
+      if: inputs.install-templates == 'true'
+      with:
+        path: $HOME/AppData/Roaming/Godot/export_templates/${{ inputs.godot-version }}.stable.mono
+        key: Godot_export_templates_${{ inputs.godot-version }}.stable.mono
+
+    - name: Fetch Godot Export Templates
+      if: inputs.install-templates == 'true' && steps.cache-templates.outputs.cache-hit != 'true'
+      uses: dsaltares/fetch-gh-release-asset@master
+      with:
+        repo: 'godotengine/godot-builds'
+        version: 'tags/${{ inputs.godot-version }}-stable'
+        file: 'Godot_v${{ inputs.godot-version }}-stable_mono_export_templates.tpz'
+        target: '$HOME/Downloads/Godot_v${{ inputs.godot-version }}-stable_mono_export_templates.tpz'
+
+    - name: Install Godot Export Templates
+      if: inputs.install-templates == 'true' && steps.cache-templates.outputs.cache-hit != 'true'
+      shell: bash
+      env:
+        GODOT_TEMPLATES_DIR: '$HOME/AppData/Roaming/Godot/export_templates'
+      working-directory: '$HOME/Downloads'
+      run: |
+        unzip ./Godot_v${{ inputs.godot-version }}-stable_mono_export_templates.tpz
+        mkdir -p "$GODOT_TEMPLATES_DIR"
+        mv ./templates "$GODOT_TEMPLATES_DIR/${{ inputs.godot-version }}.stable.mono"
+
+    - name: Report back the executable location
+      id: assign-executable
+      shell: bash
+      env:
+        GODOT_EXECUTABLE: C:/Godot/Godot_v${{ inputs.godot-version }}-stable_mono_win64/Godot_v${{ inputs.godot-version }}-stable_mono_win64
+      run: |
+        echo "GODOT_EXE=${{ env.GODOT_EXECUTABLE }}.exe" >> $GITHUB_OUTPUT
+        echo "GODOT_CONSOLE_EXE=${{ env.GODOT_EXECUTABLE }}_console.exe" >> $GITHUB_OUTPUT

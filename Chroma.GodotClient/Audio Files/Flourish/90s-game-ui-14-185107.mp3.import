@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tk20u8pkbljg"
+path="res://.godot/imported/90s-game-ui-14-185107.mp3-d6eb9dea382ba8809f468f0642603f04.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Flourish/90s-game-ui-14-185107.mp3"
+dest_files=["res://.godot/imported/90s-game-ui-14-185107.mp3-d6eb9dea382ba8809f468f0642603f04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

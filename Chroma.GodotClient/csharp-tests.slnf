@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "Chroma.GodotClient.sln",
+    "projects": [
+      "..\\Chroma.GodotClient.GameLogicTests\\Chroma.GodotClient.GameLogicTests.csproj",
+      "..\\Chroma.GodotClient.GameLogic\\Chroma.GodotClient.GameLogic.csproj",
+      "..\\Chroma.HardwareEmulator\\Chroma.HardwareEmulator.csproj",
+      "..\\Chroma.PortForwarder\\Chroma.PortForwarder.csproj"
+    ]
+  }
+}
