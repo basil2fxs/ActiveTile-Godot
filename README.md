@@ -21,6 +21,8 @@ A modular, interactive game platform powered by a custom hardware-software ecosy
 - Vendor-provided microcontroller and tile hardware (UDP protocol)
 - Custom-built communication protocol for real-time input and visual feedback
 
+![image](https://github.com/user-attachments/assets/a7ad6321-a416-4970-8716-c71b1b00f5fa)
+
 ---
 
 ## 🗄️ Database
